@@ -1,0 +1,56 @@
+// ============================================
+// GTECH - Reset Base
+// ============================================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: $font-size-base;
+}
+
+body {
+  font-family: $font-primary;
+  color: $text-dark;
+  line-height: $line-height-base;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: $transition-base;
+}
+
+// Imágenes
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Listas
+ul,
+ol {
+  list-style: none;
+}
+
+// Buttons
+button {
+  @include button-reset;
+}
+
+// Inputs
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}

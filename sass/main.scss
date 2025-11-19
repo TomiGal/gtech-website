@@ -1,0 +1,31 @@
+// ============================================
+// GTECH - Main SCSS
+// ============================================
+
+// Abstracts (Variables, Mixins, Functions)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+// Base (Reset, Typography, Utilities)
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/utilities';
+
+// Layout (Hero, Sections, Grid)
+@import 'layout/hero';
+@import 'layout/sections';
+@import 'layout/grid';
+
+// Components (Navbar, Buttons, Cards, Forms, Footer)
+@import 'components/navbar';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/footer';
+
+// Pages (Home, Servicios, Nosotros, Contacto)
+@import 'pages/home';
+@import 'pages/servicios';
+@import 'pages/nosotros';
+@import 'pages/contacto';

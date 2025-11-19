@@ -1,0 +1,75 @@
+// ============================================
+// GTECH - Forms Component
+// ============================================
+
+.contact-form-card,
+.contact-info-card {
+  @include card(3rem);
+}
+
+.form-label {
+  font-weight: map-get($font-weights, 'semibold');
+  margin-bottom: map-get($spacings, '2');
+  display: block;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  border: 2px solid #e9ecef;
+  border-radius: $border-radius-sm;
+  padding: map-get($spacings, '3') map-get($spacings, '4');
+  transition: $transition-base;
+  font-family: inherit;
+  
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 150px;
+}
+
+// Contact Info
+.contact-info-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: map-get($spacings, '5');
+  margin-bottom: map-get($spacings, '6');
+  
+  .contact-info-icon {
+    @include icon-size(50px);
+    background: rgba($primary-color, 0.1);
+    border-radius: $border-radius;
+    
+    i {
+      font-size: map-get($font-sizes, '2xl');
+      color: $primary-color;
+    }
+  }
+  
+  .contact-info-text {
+    h5 {
+      font-size: map-get($font-sizes, 'lg');
+      font-weight: map-get($font-weights, 'bold');
+      margin-bottom: map-get($spacings, '2');
+    }
+    
+    p {
+      color: $text-light;
+      margin: 0;
+    }
+    
+    a {
+      color: $text-dark;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

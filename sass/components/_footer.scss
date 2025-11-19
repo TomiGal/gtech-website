@@ -1,0 +1,78 @@
+// ============================================
+// GTECH - Footer Component
+// ============================================
+
+.footer {
+  background: $secondary-color;
+  color: rgba($text-white, 0.8);
+  padding: map-get($spacings, '8') 0 map-get($spacings, '6');
+  
+  .footer-brand {
+    font-size: map-get($font-sizes, '2xl');
+    font-weight: map-get($font-weights, 'black');
+    color: $text-white;
+    margin-bottom: map-get($spacings, '4');
+    @include flex-center;
+    justify-content: flex-start;
+    gap: map-get($spacings, '2');
+    
+    i {
+      color: $primary-color;
+    }
+  }
+  
+  .footer-description {
+    color: rgba($text-white, 0.6);
+    margin-bottom: map-get($spacings, '5');
+  }
+  
+  .social-links {
+    display: flex;
+    gap: map-get($spacings, '4');
+    
+    a {
+      @include icon-size(40px);
+      background: rgba($text-white, 0.1);
+      border-radius: $border-radius-full;
+      color: $text-white;
+      
+      &:hover {
+        background: $primary-color;
+        color: $secondary-color;
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
+  .footer-title {
+    color: $text-white;
+    font-weight: map-get($font-weights, 'bold');
+    font-size: map-get($font-sizes, 'lg');
+    margin-bottom: map-get($spacings, '5');
+  }
+  
+  .footer-links {
+    li {
+      margin-bottom: map-get($spacings, '3');
+    }
+    
+    a {
+      color: rgba($text-white, 0.7);
+      
+      &:hover {
+        color: $primary-color;
+        padding-left: 5px;
+      }
+    }
+  }
+  
+  .footer-divider {
+    border-color: rgba($text-white, 0.1);
+    margin: map-get($spacings, '6') 0;
+  }
+  
+  .copyright {
+    color: rgba($text-white, 0.5);
+    margin: 0;
+  }
+}

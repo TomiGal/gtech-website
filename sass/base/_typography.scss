@@ -1,0 +1,28 @@
+// ============================================
+// GTECH - Typography
+// ============================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: map-get($font-weights, 'bold');
+  line-height: 1.2;
+  margin-bottom: map-get($spacings, '4');
+}
+
+h1 { font-size: map-get($font-sizes, '5xl'); }
+h2 { font-size: map-get($font-sizes, '4xl'); }
+h3 { font-size: map-get($font-sizes, '3xl'); }
+h4 { font-size: map-get($font-sizes, '2xl'); }
+h5 { font-size: map-get($font-sizes, 'xl'); }
+h6 { font-size: map-get($font-sizes, 'lg'); }
+
+p {
+  margin-bottom: map-get($spacings, '4');
+  line-height: $line-height-base;
+}
+
+// Responsive Typography
+@include respond-to-max('md') {
+  h1 { font-size: map-get($font-sizes, '4xl'); }
+  h2 { font-size: map-get($font-sizes, '3xl'); }
+  h3 { font-size: map-get($font-sizes, '2xl'); }
+}

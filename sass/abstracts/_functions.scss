@@ -1,0 +1,26 @@
+// ============================================
+// GTECH - Functions SCSS
+// ============================================
+
+// Convertir px a rem
+@function rem($pixels) {
+  @return ($pixels / 16) * 1rem;
+}
+
+// Obtener valor de mapa
+@function get-color($color-name) {
+  @if map-has-key($colors, $color-name) {
+    @return map-get($colors, $color-name);
+  }
+  @warn "Color #{$color-name} no encontrado.";
+  @return null;
+}
+
+// Calcular contraste
+@function contraste($color) {
+  @if (lightness($color) > 50) {
+    @return $text-dark;
+  } @else {
+    @return $text-white;
+  }
+}

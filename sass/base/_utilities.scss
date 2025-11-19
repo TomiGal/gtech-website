@@ -1,0 +1,36 @@
+// ============================================
+// GTECH - Utilities
+// ============================================
+
+// Spacing utilities con EACH
+@each $name, $size in $spacings {
+  .m-#{$name} { margin: $size !important; }
+  .mt-#{$name} { margin-top: $size !important; }
+  .mb-#{$name} { margin-bottom: $size !important; }
+  .ml-#{$name} { margin-left: $size !important; }
+  .mr-#{$name} { margin-right: $size !important; }
+  
+  .p-#{$name} { padding: $size !important; }
+  .pt-#{$name} { padding-top: $size !important; }
+  .pb-#{$name} { padding-bottom: $size !important; }
+  .pl-#{$name} { padding-left: $size !important; }
+  .pr-#{$name} { padding-right: $size !important; }
+}
+
+// Text utilities
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+// Display utilities
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+// Shadow utilities con EACH
+@each $depth in (1, 2, 3) {
+  .shadow-#{$depth} {
+    @include shadow($depth);
+  }
+}

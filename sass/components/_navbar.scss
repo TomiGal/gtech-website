@@ -1,0 +1,98 @@
+// ============================================
+// GTECH - Navbar Component
+// ============================================
+
+#mainNav {
+  padding: map-get($spacings, '4') 0;
+  background: rgba($secondary-color, 0.95);
+  backdrop-filter: blur(10px);
+  transition: $transition-base;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  
+  &.scrolled {
+    padding: map-get($spacings, '2') 0;
+    background: rgba($secondary-color, 0.98);
+  }
+  
+  // Brand
+  .navbar-brand {
+    font-size: map-get($font-sizes, '2xl');
+    font-weight: map-get($font-weights, 'black');
+    color: $text-white !important;
+    @include flex-center;
+    gap: map-get($spacings, '2');
+    
+    i {
+      color: $primary-color;
+      font-size: map-get($font-sizes, '3xl');
+    }
+    
+    .brand-text {
+      @include text-gradient;
+    }
+  }
+  
+  // Nav Links
+  .nav-link {
+    color: rgba($text-white, 0.8) !important;
+    font-weight: map-get($font-weights, 'semibold');
+    padding: map-get($spacings, '2') map-get($spacings, '4') !important;
+    margin: 0 map-get($spacings, '1');
+    transition: $transition-base;
+    position: relative;
+    
+    &::after {
+      @include pseudo;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $primary-color;
+      transition: $transition-base;
+      transform: translateX(-50%);
+    }
+    
+    &:hover,
+    &.active {
+      color: $text-white !important;
+      
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+  
+  // CTA Button
+  .btn-cta {
+    background: $primary-color;
+    color: $secondary-color !important;
+    border-radius: 25px;
+    padding: map-get($spacings, '2') map-get($spacings, '5') !important;
+    margin-left: map-get($spacings, '4');
+    font-weight: map-get($font-weights, 'semibold');
+    
+    &:hover {
+      background: $primary-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+    }
+  }
+  
+  // Mobile Menu
+  @include respond-to-max('lg') {
+    .navbar-collapse {
+      margin-top: map-get($spacings, '4');
+    }
+    
+    .nav-link {
+      padding: map-get($spacings, '3') 0 !important;
+      margin: 0;
+    }
+    
+    .btn-cta {
+      margin-left: 0;
+      margin-top: map-get($spacings, '3');
+      text-align: center;
+    }
+  }
+}

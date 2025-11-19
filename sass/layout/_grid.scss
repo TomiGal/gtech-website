@@ -1,0 +1,42 @@
+// ============================================
+// GTECH - Grid System
+// ============================================
+
+.container {
+  @include container;
+}
+
+// Grids con EACH
+$grid-types: (
+  'services': 300px,
+  'features': 250px,
+  'pricing': 280px,
+  'values': 280px,
+  'team': 300px,
+  'certifications': 200px,
+  'stats': 200px,
+);
+
+@each $name, $min-width in $grid-types {
+  .#{$name}-grid {
+    @include grid-auto-fit($min-width, 2rem);
+  }
+}
+
+// Features grid específico (2 columnas)
+.features-grid {
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Stats grid responsive
+.stats-grid {
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to('lg') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

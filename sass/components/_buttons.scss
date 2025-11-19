@@ -1,0 +1,53 @@
+// ============================================
+// GTECH - Buttons Component
+// ============================================
+
+.btn {
+  @include button-reset;
+  padding: map-get($spacings, '4') map-get($spacings, '6');
+  border-radius: $border-radius;
+  font-weight: map-get($font-weights, 'semibold');
+  transition: $transition-base;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: map-get($spacings, '2');
+  
+  &.btn-primary {
+    background: $primary-color;
+    color: $secondary-color;
+    
+    &:hover {
+      background: $primary-dark;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba($primary-color, 0.4);
+    }
+  }
+  
+  &.btn-outline-light {
+    border: 2px solid rgba($text-white, 0.3);
+    color: $text-white;
+    background: transparent;
+    
+    &:hover {
+      background: rgba($text-white, 0.1);
+      border-color: $text-white;
+    }
+  }
+  
+  &.btn-light {
+    background: $text-white;
+    color: $secondary-color;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba($text-white, 0.3);
+    }
+  }
+  
+  &.btn-lg {
+    padding: map-get($spacings, '4') map-get($spacings, '7');
+    font-size: map-get($font-sizes, 'lg');
+  }
+}
