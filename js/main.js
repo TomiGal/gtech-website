@@ -80,8 +80,9 @@ window.addEventListener('scroll', function() {
     });
 });
 
-
+// ============================================
 // Form Validation (Contact Form)
+// ============================================
 
 const forms = document.querySelectorAll('.needs-validation');
 
@@ -96,15 +97,17 @@ forms.forEach(form => {
     }, false);
 });
 
-
+// ============================================
 // Loading Animation
+// ============================================
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
 
-
+// ============================================
 // Parallax Effect on Hero
+// ============================================
 
 window.addEventListener('scroll', function() {
     const scrolled = window.scrollY;
@@ -115,8 +118,9 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
+// ============================================
 // Counter Animation (Stats)
+// ============================================
 
 function animateCounter(element, target, suffix = '') {
     let current = 0;
@@ -132,7 +136,7 @@ function animateCounter(element, target, suffix = '') {
     }, 30);
 }
 
-// Trigger counter animation cuando stats section esta visible
+// Trigger counter animation when stats section is visible
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px'
@@ -162,9 +166,9 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-
-
-// Testimonials Auto-Play (Opcional)
+// ============================================
+// Testimonials Auto-Play (Optional)
+// ============================================
 
 const testimonialsCarousel = document.getElementById('testimonialsCarousel');
 if (testimonialsCarousel) {
@@ -174,9 +178,9 @@ if (testimonialsCarousel) {
     });
 }
 
-
-
-// Mobile Menu Auto-Close con Link Click
+// ============================================
+// Mobile Menu Close on Link Click
+// ============================================
 
 const navLinks = document.querySelectorAll('.nav-link');
 const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -191,16 +195,18 @@ navLinks.forEach(link => {
     });
 });
 
+// ============================================
+// Scroll to Top Button (Optional Enhancement)
+// ============================================
 
-
-// Create scroll para top button
+// Create scroll to top button
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollTopBtn.className = 'scroll-top-btn';
 scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
 document.body.appendChild(scrollTopBtn);
 
-// CSS para scroll top button
+// Add CSS for scroll top button
 const style = document.createElement('style');
 style.textContent = `
     .scroll-top-btn {
@@ -209,8 +215,8 @@ style.textContent = `
         right: 30px;
         width: 50px;
         height: 50px;
-        background: var(--primary-color);
-        color: var(--secondary-color);
+        background: #00d4ff;
+        color: #1a1a2e;
         border: none;
         border-radius: 50%;
         font-size: 1.25rem;
@@ -228,14 +234,18 @@ style.textContent = `
     }
     
     .scroll-top-btn:hover {
-        background: var(--primary-dark);
+        background: #00a3cc;
         transform: translateY(-5px);
         box-shadow: 0 6px 16px rgba(0, 212, 255, 0.6);
+    }
+    
+    .scroll-top-btn i {
+        color: #1a1a2e;
     }
 `;
 document.head.appendChild(style);
 
-// Show/hide scroll
+// Show/hide scroll to top button
 window.addEventListener('scroll', function() {
     if (window.scrollY > 300) {
         scrollTopBtn.classList.add('show');
